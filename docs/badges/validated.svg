@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="24" viewBox="0 0 110 24" role="img" aria-label="Validated Stage">
+  <title>Validated Stage</title>
+  <defs>
+    <linearGradient id="valGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="110" height="24" rx="4" fill="url(#valGrad)"/>
+  
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      path { animation: none !important; }
+    }
+  </style>
+  
+  <path d="M10,12 L13,15 L18,10" 
+        stroke="white" 
+        stroke-width="2" 
+        fill="none" 
+        stroke-linecap="round" stroke-linejoin="round">
+    <animate attributeName="stroke-dasharray" from="0 20" to="20 0" dur="1s" fill="freeze"/>
+  </path>
+  
+  <text x="60" y="16" text-anchor="middle" font-size="12" fill="white" font-weight="600" font-family="Arial, sans-serif">
+    Validated
+  </text>
+</svg>
