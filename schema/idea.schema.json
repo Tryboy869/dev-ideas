@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://tryboy869.github.io/ideas/schema/idea.schema.json",
+  "title": "/dev/ideas Idea Schema",
+  "description": "JSON schema for technical proof-of-concept ideas",
+  "type": "object",
+  "required": ["id", "title", "category", "status", "author", "content", "metadata"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "minLength": 3,
+      "maxLength": 60,
+      "description": "Unique slug identifier (lowercase, hyphens only)"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 100,
+      "description": "Concise title of the idea"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "distributed-systems",
+        "ai",
+        "programming-languages",
+        "developer-tools",
+        "security",
+        "networking",
+        "databases",
+        "hardware",
+        "meta-programming",
+        "other"
+      ],
+      "description": "Primary technical category"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["hypothesis", "experimentation", "concept", "poc", "validated"],
+      "description": "Current maturity level of the idea"
+    },
+    "author": {
+      "type": "object",
+      "required": ["github"],
+      "properties": {
+        "github": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9-]+$",
+          "description": "GitHub username (no @)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Optional full name"
+        },
+        "doi": {
+          "type": ["string", "null"],
+          "pattern": "^10\\.[0-9]{4,}/.*$",
+          "description": "Optional DOI for academic citation (e.g., 10.5281/zenodo.1234567)"
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": ["problem", "approach", "why_not_bullshit"],
+      "properties": {
+        "problem": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 500,
+          "description": "What technical problem does this address?"
+        },
+        "approach": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 500,
+          "description": "High-level approach or intuition"
+        },
+        "why_not_bullshit": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 500,
+          "description": "Technical constraints, edge cases, or proof of coherence"
+        }
+      }
+    },
+    "proofs": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["type", "url"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["github", "gitlab", "colab", "jupyter", "video", "demo", "paper"],
+            "description": "Type of proof artifact"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Public URL to the proof"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "Brief description of what this proof demonstrates"
+          }
+        }
+      },
+      "description": "Evidence for PoC or Validated status (required for those statuses)"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created", "updated", "tags"],
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date (YYYY-MM-DD)"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date (YYYY-MM-DD)"
+        },
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "description": "Technical tags (lowercase, hyphens only)"
+        }
+      }
+    },
+    "discussion_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://github\\.com/.*/discussions/[0-9]+$",
+      "description": "GitHub Discussion URL (auto-generated)"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "enum": ["poc", "validated"] }
+        }
+      },
+      "then": {
+        "required": ["proofs"],
+        "properties": {
+          "proofs": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}
