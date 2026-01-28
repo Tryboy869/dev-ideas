@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/dev/ideas — Community Badges</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #111111;
+            --accent: #8b5cf6;
+            --text-main: #eeeeee;
+            --text-dim: #999999;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; padding: 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        header { margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+        h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .tagline { color: var(--text-dim); }
+        .badge-section { background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 2rem; }
+        .badge-section h2 { color: var(--accent); margin-bottom: 1rem; }
+        .badge-display { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .badge-display svg:hover { filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5)); transition: 0.3s; }
+        pre { background: #1a1a1a; color: #d1d5db; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; margin-top: 1rem; }
+        code { font-family: 'JetBrains Mono', monospace; }
+        .note { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 1rem; margin-top: 1rem; border-radius: 4px; font-size: 0.9rem; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>/dev/ideas Community Badges</h1>
+            <p class="tagline">Show your participation in the open PoC registry</p>
+        </header>
+
+        <!-- Badge 1: Registry -->
+        <section class="badge-section">
+            <h2>1. Registry Badge (Recommended)</h2>
+            <div class="badge-display">
+                <svg width="180" height="28" viewBox="0 0 180 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="180" height="28" rx="6" fill="#111111"/>
+                    <path d="M0 6C0 2.68629 2.68629 0 6 0H100V28H0V6Z" fill="#1A1A1A"/>
+                    <rect x="100" width="80" height="28" fill="url(#paint0_linear)"/>
+                    <text x="10" y="18" fill="white" style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:12px;">/dev/ideas</text>
+                    <text x="112" y="18" fill="white" style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:12px;">REGISTRY</text>
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="100" y1="0" x2="180" y2="28" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#8B5CF6"/>
+                            <stop offset="1" stop-color="#06B6D4"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <p><strong>Use case:</strong> For README.md files of projects listed in the registry</p>
+            <pre><code>[![/dev/ideas](https://raw.githubusercontent.com/Tryboy869/dev-ideas/main/assets/badges/registry.svg)](https://tryboy869.github.io/dev-ideas/)</code></pre>
+        </section>
+
+        <!-- Badge 2: PoC -->
+        <section class="badge-section">
+            <h2>2. Idea Inside Badge</h2>
+            <div class="badge-display">
+                <svg width="140" height="28" viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="140" height="28" rx="14" fill="#111111" stroke="#8B5CF6" stroke-width="1"/>
+                    <circle cx="14" cy="14" r="4" fill="#8B5CF6">
+                        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    <text x="26" y="18" fill="white" style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:11px;">IDEA INSIDE</text>
+                </svg>
+            </div>
+            <p><strong>Use case:</strong> To indicate a project implements an idea from /dev/ideas</p>
+            <pre><code>[![Idea Inside](https://raw.githubusercontent.com/Tryboy869/dev-ideas/main/assets/badges/idea-inside.svg)](https://tryboy869.github.io/dev-ideas/)</code></pre>
+        </section>
+
+        <!-- Badge 3: Thinker -->
+        <section class="badge-section">
+            <h2>3. Thinker Badge (Profile)</h2>
+            <div class="badge-display">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" rx="20" fill="#111111"/>
+                    <path d="M30 40L50 60L70 40" stroke="url(#grad2)" stroke-width="8" stroke-linecap="round"/>
+                    <text x="50" y="85" text-anchor="middle" fill="white" style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:10px;">/DEV/IDEAS</text>
+                    <defs>
+                        <linearGradient id="grad2" x1="30" y1="40" x2="70" y2="60">
+                            <stop stop-color="#EC4899"/>
+                            <stop offset="1" stop-color="#8B5CF6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <p><strong>Use case:</strong> GitHub profile, portfolio, stickers</p>
+            <pre><code>&lt;img src="https://raw.githubusercontent.com/Tryboy869/dev-ideas/main/assets/badges/thinker.svg" width="80"&gt;</code></pre>
+        </section>
+
+        <div class="note">
+            <strong>⚠️ Naming Convention:</strong> After your idea is merged, prefix your proof repositories with <code>devideas-</code> (e.g., <code>devideas-distributed-sqlite</code>) and add the appropriate badge to your README.
+        </div>
+
+        <footer>
+            <p><a href="index.html">← Back to /dev/ideas</a></p>
+            <p style="margin-top: 1rem;">Founded by <a href="https://github.com/anzize">Daouda A. Anzize</a> • January 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
