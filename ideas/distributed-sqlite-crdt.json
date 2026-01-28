@@ -1,0 +1,28 @@
+{
+  "id": "distributed-sqlite-crdt",
+  "title": "Distributed SQLite with CRDT",
+  "category": "distributed-systems",
+  "status": "hypothesis",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": null
+  },
+  "content": {
+    "problem": "SQLite is great but doesn't replicate. CRDTs enable conflict-free sync for local-first apps.",
+    "approach": "Wrap SQLite in a CRDT layer using automerge or yjs principles for state management.",
+    "why_not_bullshit": "SQLite's deterministic query planner + CRDT merge semantics are compatible. Prior art: ElectricSQL, CR-SQLite."
+  },
+  "proofs": [],
+  "metadata": {
+    "created": "2026-01-20",
+    "updated": "2026-01-28",
+    "tags": [
+      "consensus",
+      "p2p",
+      "database",
+      "local-first"
+    ]
+  },
+  "discussion_url": null
+}

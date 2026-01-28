@@ -1,0 +1,28 @@
+{
+  "id": "logic-dna-lang",
+  "title": "Bio-Synthesized Logic Gates",
+  "category": "programming-languages",
+  "status": "concept",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": null
+  },
+  "content": {
+    "problem": "Silicon scaling is hitting physical limits; biological computing is highly parallel.",
+    "approach": "A language that compiles high-level logic into CRISPR-Cas9 sequence instructions.",
+    "why_not_bullshit": "DNA strands can act as logic gates through strand displacement techniques (Qian & Winfree, 2011)."
+  },
+  "proofs": [],
+  "metadata": {
+    "created": "2025-12-01",
+    "updated": "2026-01-28",
+    "tags": [
+      "bio-computing",
+      "compilers",
+      "synthetic-biology",
+      "dna"
+    ]
+  },
+  "discussion_url": null
+}

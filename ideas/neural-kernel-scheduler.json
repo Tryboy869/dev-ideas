@@ -1,0 +1,44 @@
+{
+  "id": "neural-kernel-scheduler",
+  "title": "Neural Linux Kernel Scheduler",
+  "category": "distributed-systems",
+  "status": "validated",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": "10.1109/OSDI.2025.neural-sched"
+  },
+  "content": {
+    "problem": "Standard CFS schedulers fail to predict bursty microservices workloads, causing tail latency spikes.",
+    "approach": "Replace heuristic scoring with a lightweight LSTM trained on task switch patterns.",
+    "why_not_bullshit": "In-kernel inference is now possible with fixed-point math and specialized registers (AVX-512)."
+  },
+  "proofs": [
+    {
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2501.neural-kernel",
+      "description": "Academic paper with reproducible benchmarks"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/kernel-neural/sched-lstm",
+      "description": "Kernel patch with 3 independent implementations"
+    },
+    {
+      "type": "video",
+      "url": "https://youtube.com/watch?v=example-neural-sched",
+      "description": "Linux Plumbers Conference 2025 talk"
+    }
+  ],
+  "metadata": {
+    "created": "2025-06-15",
+    "updated": "2026-01-15",
+    "tags": [
+      "kernel",
+      "scheduling",
+      "ai-sys",
+      "linux"
+    ]
+  },
+  "discussion_url": null
+}

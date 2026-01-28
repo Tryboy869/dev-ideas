@@ -1,0 +1,28 @@
+{
+  "id": "type-safe-css",
+  "title": "Strictly Typed CSS in Rust",
+  "category": "programming-languages",
+  "status": "concept",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": null
+  },
+  "content": {
+    "problem": "CSS is full of runtime errors and silent failures (typos, invalid units, broken cascades).",
+    "approach": "Procedural macros that parse CSS at compile-time and generate type-safe Rust structs.",
+    "why_not_bullshit": "Rust proc macros can validate CSS syntax and unit types during build. Prior art: styled-components, emotion."
+  },
+  "proofs": [],
+  "metadata": {
+    "created": "2025-11-20",
+    "updated": "2026-01-28",
+    "tags": [
+      "css",
+      "rust",
+      "frontend",
+      "type-safety"
+    ]
+  },
+  "discussion_url": null
+}

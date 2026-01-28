@@ -1,0 +1,28 @@
+{
+  "id": "weak-hardware-booster",
+  "title": "Mobile Gaming Optimizer for Weak Hardware",
+  "category": "developer-tools",
+  "status": "experimentation",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": null
+  },
+  "content": {
+    "problem": "Mobile games on low-end devices suffer from high CPU load and frame drops.",
+    "approach": "Semantic collision convergence: reduce collision checks by 95% using spatial hashing + predictive physics.",
+    "why_not_bullshit": "Early tests show 40ms \u2192 4ms collision time on Galaxy A10. Physics engine determinism preserved."
+  },
+  "proofs": [],
+  "metadata": {
+    "created": "2025-11-10",
+    "updated": "2026-01-28",
+    "tags": [
+      "mobile",
+      "optimization",
+      "gaming",
+      "low-spec"
+    ]
+  },
+  "discussion_url": null
+}

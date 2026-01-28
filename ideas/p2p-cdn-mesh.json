@@ -1,0 +1,28 @@
+{
+  "id": "p2p-cdn-mesh",
+  "title": "Incentivized P2P CDN Mesh",
+  "category": "distributed-systems",
+  "status": "hypothesis",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": null
+  },
+  "content": {
+    "problem": "Centralized CDNs are expensive and single points of failure.",
+    "approach": "Blockchain-backed reward system for browsers sharing static assets via WebRTC.",
+    "why_not_bullshit": "WebRTC DataChannels have sufficient bandwidth for regional asset sharing. Browser storage API enables caching."
+  },
+  "proofs": [],
+  "metadata": {
+    "created": "2026-01-18",
+    "updated": "2026-01-28",
+    "tags": [
+      "p2p",
+      "webrtc",
+      "blockchain",
+      "cdn"
+    ]
+  },
+  "discussion_url": null
+}

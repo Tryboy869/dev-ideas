@@ -1,0 +1,34 @@
+{
+  "id": "zero-cost-hot-reload",
+  "title": "Zero-Cost Rust Hot Reloading",
+  "category": "developer-tools",
+  "status": "poc",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": null
+  },
+  "content": {
+    "problem": "Rust compile times kill the feedback loop during UI development (30s+ per iteration).",
+    "approach": "Dynamic library swapping with a state-preserving bridge between host and guest using #[repr(C)].",
+    "why_not_bullshit": "ABI stability can be mimicked with repr(C) for shared state types. Existing: hot-lib-reloader crate."
+  },
+  "proofs": [
+    {
+      "type": "github",
+      "url": "https://github.com/rksm/hot-lib-reloader-rs",
+      "description": "Reference implementation showing 200ms reload times"
+    }
+  ],
+  "metadata": {
+    "created": "2026-01-10",
+    "updated": "2026-01-28",
+    "tags": [
+      "rust",
+      "dx",
+      "tooling",
+      "hot-reload"
+    ]
+  },
+  "discussion_url": null
+}

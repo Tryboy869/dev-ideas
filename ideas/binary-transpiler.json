@@ -1,0 +1,28 @@
+{
+  "id": "binary-transpiler",
+  "title": "Universal Binary Transpiler",
+  "category": "developer-tools",
+  "status": "concept",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": null
+  },
+  "content": {
+    "problem": "Compiling 20-year-old C++ is impossible due to lost dependencies and deprecated toolchains.",
+    "approach": "Lift binaries to LLVM IR and re-target to modern architectures (x86-64, ARM, WASM).",
+    "why_not_bullshit": "Binary lifting technology (McSema, Remill) has matured significantly. LLVM provides stable IR format."
+  },
+  "proofs": [],
+  "metadata": {
+    "created": "2025-09-30",
+    "updated": "2026-01-28",
+    "tags": [
+      "legacy",
+      "llvm",
+      "binary",
+      "transpiler"
+    ]
+  },
+  "discussion_url": null
+}

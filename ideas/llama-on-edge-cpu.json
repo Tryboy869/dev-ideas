@@ -1,0 +1,28 @@
+{
+  "id": "llama-on-edge-cpu",
+  "title": "LLM Inference on 2015 CPUs",
+  "category": "ai",
+  "status": "experimentation",
+  "author": {
+    "github": "anzize",
+    "name": "Daouda Abdoul Anzize",
+    "doi": null
+  },
+  "content": {
+    "problem": "AI models require massive VRAM and modern GPUs, excluding billions of users.",
+    "approach": "Aggressive 2-bit quantization + AVX2-optimized matrix math for older hardware.",
+    "why_not_bullshit": "Low-bit quantization preserves 90% of reasoning capabilities with 1/10th memory. AVX2 available since 2013."
+  },
+  "proofs": [],
+  "metadata": {
+    "created": "2026-01-05",
+    "updated": "2026-01-28",
+    "tags": [
+      "ai",
+      "optimization",
+      "low-spec",
+      "quantization"
+    ]
+  },
+  "discussion_url": null
+}
