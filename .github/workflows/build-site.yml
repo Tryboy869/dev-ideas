@@ -29,7 +29,7 @@ jobs:
       - name: Generate ideas.json for website
         run: |
           echo "📦 Aggregating all ideas into docs/ideas.json..."
-          jq -s '.' ideas/*.json > docs/ideas.json
+          mkdir -p docs && if ls ideas/*.json 1> /dev/null 2>&1; then jq -s '.' ideas/*.json > docs/ideas.json; else echo "[]" > docs/ideas.json; fi
           
           echo "✅ Generated docs/ideas.json with $(jq length docs/ideas.json) ideas"
 
