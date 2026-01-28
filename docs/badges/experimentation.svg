@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="24" viewBox="0 0 150 24" role="img" aria-label="Experimentation Stage">
+  <title>Experimentation Stage</title>
+  <defs>
+    <linearGradient id="expGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="150" height="24" rx="4" fill="url(#expGrad)"/>
+  <text x="75" y="16" text-anchor="middle" font-size="12" fill="white" font-weight="600" font-family="Arial, sans-serif">
+    Experimentation
+  </text>
+  
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      circle { animation: none !important; }
+    }
+  </style>
+  
+  <circle cx="138" cy="12" r="2" fill="white">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
