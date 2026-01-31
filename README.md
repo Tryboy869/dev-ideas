@@ -188,9 +188,9 @@ git add . && git commit -m "feat: add my-idea-slug" && git push
 ## 🌟 Recognition
 
 If you use an idea from this registry in your work:
-- **Academic citation**: Use the provided DOI (if available)
-- **Informal attribution**: Link back to the idea's Discussion thread
-- **Star this repo** to show support
+- Open a [Discussion](https://github.com/Tryboy869/awesome-dev-ideas/discussions)
+- Reach out to [@anzize](https://github.com/anzize#readme)
+- Email: contact@proton.me
 
 ---
 
